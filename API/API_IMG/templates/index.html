@@ -1,0 +1,133 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Readme{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+  <!-- ... -->
+</div>
+ 
+
+<div class="container-fluid">
+
+  <h1>Readme</h1>
+  <p>Funcionalidades da API.</p><br/><br/>
+
+  <div class="row">
+  	<div class="col-sm-2" style="background-color:white;"></div>
+
+  	<div class="col-sm-1" style="background-color:white;"> 
+  	<p>JSON para envio de graficos com apenas 1 categoria.</p><br/>
+  	<p>As váriaveis X e Y podem ser alteradas para o nome que desejar.</p><br/>	
+  	</div>
+
+    <div class="col-sm-1" style="background-color:lavenderblush;" > <p>JSON example:</p>
+		<code>body = {<br/>
+		  "id":1,<br/>
+		  "title": "Teste",<br/>
+		  "names":["dado1"],<br/>
+		  "data":[<br/>
+		    &nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;"x":{<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"0":"Janeiro",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"1":"Fevereiro",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"2":"Março",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"3":"Abril"<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp; },<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;"y":{"<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"0": 20,{"<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"1": 19,<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"2": 14,<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"3": 17<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp; }<br/>
+		  &nbsp;&nbsp;&nbsp;  }<br/>
+		 &nbsp;&nbsp;]  <br/>
+		 &nbsp;}<br/>
+		}</code></div>
+
+	<div class="col-sm-2" style="background-color:white;"></div>
+		
+	<div class="col-sm-1" style="background-color:white;">
+	<p>JSON para envio de graficos com 2 ou mais categoria.</p><br/>
+  	<p>As váriaveis X e Y podem ser alteradas para o nome que desejar.</p><br/>	
+	</div>
+
+	<div class="col-sm-2" style="background-color:lavenderblush;"> <p>JSON example:</p>
+		<code>body = {<br/>
+		  "id": 2,<br/>
+		  "title": "Teste",<br/>
+		  "names":["dado1","dado2"],<br/>
+		  "data": [<br/>
+		    &nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;"mês": {<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"0": "Janeiro",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"1": "Fevereiro",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"2": "Março",<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"3": "Abril"<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp;"acesso": {<br/>
+		        &nbsp;&nbsp;&nbsp;&nbsp;"0": 20,<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "1": 19,<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "2": 14,<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "3": 17<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+		    &nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp; "mês": {<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "0": "Janeiro",<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "1": "Fevereiro",<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "2": "Março",<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;  "3": "Abril"<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp; },<br/>
+		     &nbsp;&nbsp;&nbsp;&nbsp; "acesso": {<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;  "0": 14,<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;  "1": 16,<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;  "2": 4,<br/>
+		       &nbsp;&nbsp;&nbsp;&nbsp; "3": 10<br/>
+		      &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+		   &nbsp;&nbsp; }<br/>
+		 &nbsp;]<br/>
+		}</code></div>
+  </div>
+</div><br/><br/><br/><br/><br/><br/>
+
+<div class="row">
+	
+	<div class="col-sm-1" style="background-color:white;"></div>
+    <div class="col-sm-4" style="background-color:white;"><img src="static/img_id_1.PNG"  ></div>
+    <div class="col-sm-2" style="background-color:white;">
+  	<h1 style="color:Tomato;">"id": 1</h1></div>
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_1.1.PNG" ></div>
+</div>
+<br/><br/><br/>
+
+<div class="row">
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_2.PNG" width=800 height=500 ></div>
+    <div class="col-sm-1" style="background-color:white;"> 
+  	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h1 style="color:Tomato;">"id": 2</h1></div>
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_2.1.PNG" width=800 height=500 ></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_3.PNG" width=800 height=500 ></div>
+    <div class="col-sm-1" style="background-color:white;"> 
+  	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h1 style="color:Tomato;">"id": 3</h1></div>
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_3.1.PNG" width=800 height=500 ></div>
+</div>
+<div class="row">
+    <div class="col-sm-5" style="background-color:white;">></div>
+    <div class="col-sm-1" style="background-color:white;"> 
+  	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h1 style="color:Tomato;">"id": 4</h1></div>
+    <div class="col-sm-5" style="background-color:white;"><img src="static/img_id_4.1.PNG" width=800 height=500 ></div>
+</div>
+ 
+  
+{% endblock %}
+
+{% block content %}
+
+ 
+{% endblock %}
+
+
+
+&nbsp;
