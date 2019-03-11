@@ -1,0 +1,5 @@
+estudar estatisticas de csgo
+
+o objetivo é trazer uma estatistica ingame fulltime.
+
+como fazer analises em video com python?
