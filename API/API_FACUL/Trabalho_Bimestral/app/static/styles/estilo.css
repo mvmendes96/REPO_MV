@@ -1,0 +1,148 @@
+body{
+  background-color:green;
+}
+#login-box {
+  background-color:yellow;
+  width:380px;
+  height:260px;
+  margin:140px auto 0px;
+  border-radius:5px;
+}
+#login-box1 {
+  background-color:yellow;
+  width:380px;
+  height:340px;
+  margin:140px auto 0px;
+  border-radius:5px;
+}
+#senha-box {
+  background-color:yellow;
+  width:380px;
+  height:170px;
+  margin:140px auto 0px;
+  border-radius:5px;
+}
+#senha-caixa-interno{
+  width: 360px;
+  height:150px;
+  background-color:white;
+  position:absolute;
+  margin:10px;
+  border-radius:5px;
+  box-shadow:0px 0px 5px black;
+  overflow:hidden;
+}
+#login-box-interno {
+  width: 360px;
+  height:240px;
+  background-color:white;
+  position:absolute;
+  margin:10px;
+  border-radius:5px;
+  box-shadow:0px 0px 5px black;
+  overflow:hidden;
+}
+#login-box-interno1 {
+  width: 360px;
+  height:320px;
+  background-color:white;
+  position:absolute;
+  margin:10px;
+  border-radius:5px;
+  box-shadow:0px 0px 5px black;
+  overflow:hidden;
+}
+#login-box-label {
+  height:45px;
+  text-align:center;
+  font:bold 14px/45px sans-serif;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom:1px solid #bfc3c5;
+  box-shadow:1px 0px 3px black;
+  color:#555555;
+  text-shadow:1px 0px 1px white;
+}
+.input-div {
+  margin:20px;
+  padding:5px;
+  background-color:#f2f5f7;
+  border-radius:3px;
+}
+.input-div input {
+  width:310px;
+  height:35px;
+  padding-left:5px;
+  font:normal 13px sans-serif;
+  color:#aeaeae;
+  border-radius:3px;
+  border:1px solid #bfc4c6;
+  outline:none;
+}
+.input-div:hover {
+  background-color:magenta;
+}
+.input-div:hover input {
+  border-color:purple;
+}
+#input-senha {
+  margin-top:-10px;
+}
+#botoes {
+  width:310px;
+  margin-left:25px;
+}
+#esqueceu{
+  height:45px;
+  text-align:center;
+  font:bold 14px/45px sans-serif;
+   
+  color:black;
+  
+}
+#botao {
+  float:right;
+  background-color:#aeae;
+  padding:5px 15px;
+  font:bold 12px sans-serif;
+  border-radius:20px;
+  text-shadow:0px 1px white;
+  border:1px solid #9eb9c3;
+  color:#527988;
+  box-shadow:0px 0px 10px #c9c9c9;
+}
+#botao:hover {
+  background-color:e0f1fc;
+  cursor:pointer;
+}
+#lembrar-senha {
+  font:normal 12px sans-serif;
+}
+#recupera-senha {
+  text-align:center;
+  font: 14px/45px sans-serif;
+  color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: blue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

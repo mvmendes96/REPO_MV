@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Integração e Distribuição de Sistemas</title>
+
+  <!-- dependencias -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <style>
+    #container {
+      min-width: 310px;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto
+}
+  </style>
+
+
+
+<!-- <script src="/static/data1.json"></script> -->
+<script type="text/javascript">
+   
+$.getJSON('static/data1.json', function(data) {
+
+Highcharts.Chart('container', {
+
+	title:{
+		text:data.text 
+	},
+});
+	});
+
+    // Create the chart
+    
+
+</script>
+</head>
+<body>
+  <!-- colocar aqui os divs -->
+  <div id="container"></div>
+</body>
+</html>

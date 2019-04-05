@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Integração e Distribuição de Sistemas</title>
+
+  <!-- dependencias -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <style>
+    #container {
+      min-width: 310px;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto
+}
+  </style>
+
+  <!-- inicio do grafico -->
+  <script type="text/javascript">
+    $(function (){
+      
+Highcharts.chart('container', {
+
+    title: {
+        text: 'PIB Brasil, Canada e Mexico'
+    },
+
+    subtitle: {
+        text: 'Fonte: google.com'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Produto Interno Bruto em bilhões'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+   
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2000,
+            pointInterval:2
+
+
+        }
+    },
+
+    series: [{
+        name: 'Brasil',
+        data: [655, 507, 669, 1107, 1695, 2208, 2465, 2456, 1794]
+    }, {
+        name: 'Canada',
+        data: [742, 757, 1023, 1549, 1613, 1613,1824, 1799, 1535]
+    }, {
+        name: 'Mexico',
+        data: [707, 772, 782, 975, 1100, 1057, 1201, 1314, 1076]
+    }],
+
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+    });
+  </script>
+  <!-- fim do grafico -->
+
+</head>
+
+<body>
+  <!-- colocar aqui os divs -->
+  <div id="container"></div>
+</body>
+
+</html>

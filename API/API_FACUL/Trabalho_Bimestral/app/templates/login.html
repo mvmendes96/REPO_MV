@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Exercicio</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/estilo.css') }}">
+  <script type="text/javascript" src="{{ url_for('static',filename='styles/scripts.js') }}"></script>
+  
+</head>
+
+<body>
+
+  <ul>
+  <li><a class="active" href="login.html">Login</a></li>
+  <li><a href="cadastro.html">Cadastro</a></li>
+
+  
+</ul>
+  <div id="login-box">
+    <div id="login-box-interno">
+      <div id="login-box-label">Login</div>
+
+      <div class="input-div" id="input-usuario">
+        <input id="user" value="Login ou email" onclick="this.select();" type="text">
+      </div>
+      <div class="input-div" id="input-senha">
+        <input id="senha" onclick="this.select();" value="12345678" type="password">
+      </div>
+
+      <div id="botoes">
+        <div id="botao" onclick="Login()">Login</div>
+        <div id="lembrar-senha"><input type="checkbox">Manter conectado / Lembrar minha senha?</div>
+      </div>
+    </div>
+  </div>
+  <div id="esqueceu"> Esqueceu sua senha? <a href="recuperarsenha.html">Recuperar Senha</a></div>
+
+
+</body></html>
