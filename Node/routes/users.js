@@ -12,12 +12,14 @@ router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 // Register Page
 router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
+
+
 // Register
 router.post('/register', (req, res) => {
-  const { name, email, password, password2 } = req.body;
+  const { name, registro, password, password2 } = req.body;
   let errors = [];
 
-  if (!name || !email || !password || !password2) {
+  if (!name || !registro || !password || !password2) {
     errors.push({ msg: 'Please enter all fields' });
   }
 
@@ -33,25 +35,25 @@ router.post('/register', (req, res) => {
     res.render('register', {
       errors,
       name,
-      email,
+      registro,
       password,
       password2
     });
   } else {
-    User.findOne({ email: email }).then(user => {
+    User.findOne({ registro: registro }).then(user => {
       if (user) {
-        errors.push({ msg: 'Email already exists' });
+        errors.push({ msg: 'Registro já existe' });
         res.render('register', {
           errors,
           name,
-          email,
+          registro,
           password,
           password2
         });
       } else {
         const newUser = new User({
           name,
-          email,
+          registro,
           password
         });
 
@@ -91,5 +93,8 @@ router.get('/logout', (req, res) => {
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
 });
+
+
+
 
 module.exports = router;
