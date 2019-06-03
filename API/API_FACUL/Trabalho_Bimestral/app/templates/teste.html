@@ -26,19 +26,28 @@
 <!-- <script src="/static/data1.json"></script> -->
 <script type="text/javascript">
    
-$.getJSON('static/data1.json', function(data) {
+document.addEventListener('DOMContentLoaded', function () {
 
-Highcharts.Chart('container', {
+    var options = {
+        chart: {
+            type: 'spline'
+        },
+        series: [{sen_1}]
+    };
 
-	title:{
-		text:data.text 
-	},
+    Highcharts.ajax({
+        url: 'static/data.json',
+        success: function(data) {
+            options.series[0].data = data;
+            Highcharts.Chart('container', options);
+        }
+    });
+
 });
-	});
 
     // Create the chart
     
-
+document.getElementById("container").innerHTML = JSON.stringify(data, undefined, 2);
 </script>
 </head>
 <body>

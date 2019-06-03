@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Demo App
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">API_FACUL</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Integração e Distribuição de Sistemas</title>
+
+  <!-- dependencias -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <style>
+    #container1{
+      min-width: 310px;
+      max-width: 800px;
+      height: 200px;
+      margin: 0 auto
+}
+  </style>
+  <style>
+    #container2{
+      min-width: 310px;
+      max-width: 800px;
+      height: 200px;
+      margin: 0 auto
+}
+  </style>
+
+  <!-- inicio do grafico -->
+  <script type="text/javascript">
+
+    $(function (){
+      
+Highcharts.chart('container2', {
+
+    title: {
+        text: 'Grafico Sensor 2'
+    },
+
+    // subtitle: {
+    //     text: 'Fonte: google.com'
+    // },
+
+    yAxis: {
+        title: {
+            text: 'Gráfico Sensor 2'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+   
+
+    // plotOptions: {
+    //     series: {
+    //         label: {
+    //             connectorAllowed: false
+    //         },
+    //         pointStart: 0,
+    //         pointInterval:2
+
+
+    //     }
+    // },
+
+    series: [
+     {
+        name: 'Sensor 2',
+        data: [{{sens_dado_2_0}},{{sens_dado_2_1}},{{sens_dado_2_2}},{{sens_dado_2_3}},{{sens_dado_2_4}},{{sens_dado_2_5}},{{sens_dado_2_6}}]
+    }
+    ],
+
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+    });
+
+  </script>
+  <!-- fim do grafico -->
+
+</head>
+
+<body>
+  <!-- colocar aqui os divs -->
+  <div id="container1"></div>
+  <div id="container2"></div>
+</body>
+
+</html>
+{% endblock %}

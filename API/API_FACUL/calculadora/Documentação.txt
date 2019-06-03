@@ -1,0 +1,9 @@
+Utilizando o framework Flask na linguagem Python3.6 programou-se um middleware que possibilita a troca de informações entre um webservice e o serviço Postman realizando as quatro operações matemáticas.
+
+JSON = {
+	"numero_1":10,
+	"numero_2":0,
+	"operação": "="
+	}
+
+Recebendo o JSON, definimos as tres variaveis, Numero_1, Numero_2 e Operação, verificamos em qual IF ela cai, realizamos a operação e devolvemos o resultado.
