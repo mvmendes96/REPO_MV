@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 // Load Ocorrencia model
-const Ocorrencia = require('../models/Ocorrencia');
+const Ocorrencia = require('../models/ocorrencia');
 
 // Welcome Page
 router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
