@@ -1,0 +1,59 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        </i> Registro de Ocorrencia
+      </h1>
+      <% include ./partials/messages %>
+      <form action="/registrar_ocorrencia" method="POST">
+        <div class="form-group">
+          <label for="tipo">Tipo</label>
+          <input
+            type="tipo"
+            id="tipo"
+            name="tipo"
+            class="form-control"
+            placeholder="tipo"
+            value="<%= typeof tipo != 'undefined' ? tipo : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input
+            type="data"
+            id="data"
+            name="data"
+            class="form-control"
+            placeholder="Enter Data"
+            value="<%= typeof data != 'undefined' ? data : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="local">Local</label>
+          <input
+            type="local"
+            id="local"
+            name="local"
+            class="form-control"
+            placeholder="Local da Ocorrencia"
+            value="<%= typeof local != 'undefined' ? local : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nome_policial">Policial</label>
+          <input
+            type="nome_policial"
+            id="nome_policial"
+            name="nome_policial"
+            class="form-control"
+            placeholder="Nome do Policial"
+            value="<%= typeof nome_policial != 'undefined' ? nome_policial : '' %>"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Registrar Ocorrencia
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
