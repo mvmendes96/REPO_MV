@@ -1,0 +1,15 @@
+{
+  "name": "santo-tintas-blocos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^23.11.1"
+  }
+}

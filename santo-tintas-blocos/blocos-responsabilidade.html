@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santo Tintas - Blocos de Responsabilidade</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #d5d5d5;
+            padding: 40px 20px;
+        }
+
+        .page {
+            width: 800px;
+            margin: 0 auto 50px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+            page-break-after: always;
+        }
+
+        .header {
+            background: #1B2A4A;
+            color: white;
+            padding: 40px 40px 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 8px;
+            background: linear-gradient(90deg,
+                #2E7D32 0%, #2E7D32 25%,
+                #F9A825 25%, #F9A825 50%,
+                #C62828 50%, #C62828 75%,
+                #E65100 75%, #E65100 100%);
+        }
+
+        .logo-wrapper {
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .icon { font-size: 3.5em; margin: 10px 0; }
+
+        h1 {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .responsavel {
+            font-size: 1.15em;
+            font-weight: 600;
+            background: rgba(255,255,255,0.12);
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-top: 8px;
+        }
+
+        .content { padding: 35px 50px; }
+
+        .responsibilities { list-style: none; }
+
+        .responsibilities > li {
+            padding: 14px 0 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .responsibilities > li:last-child { border-bottom: none; }
+
+        .resp-main {
+            display: flex;
+            align-items: center;
+            font-size: 1.12em;
+            color: #1B2A4A;
+            font-weight: 700;
+        }
+
+        .resp-main:before {
+            content: "✓";
+            background: #1B2A4A;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 0.85em;
+        }
+
+        .resp-details {
+            list-style: none;
+            margin-left: 42px;
+            margin-top: 6px;
+        }
+
+        .resp-details li {
+            font-size: 0.95em;
+            color: #555;
+            padding: 3px 0 3px 18px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .resp-details li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #F9A825;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #1B2A4A;
+            padding: 22px 40px;
+            text-align: center;
+            color: white;
+            font-size: 1.05em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-top: 4px solid #F9A825;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .page { box-shadow: none; margin: 0; page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- ARTE 1: OPERAÇÕES — JOÃO                       -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">🏪</div>
+        <h1>Operações das Lojas</h1>
+        <div class="responsavel">Responsável: João</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li>
+                <div class="resp-main">Abertura e fechamento de loja</div>
+                <ul class="resp-details">
+                    <li>Horário de funcionamento</li>
+                    <li>Preparo da loja para o dia de trabalho</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Atendimento ao cliente</div>
+                <ul class="resp-details">
+                    <li>Seguir processos de sucesso do cliente</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Organização / Layout</div>
+                <ul class="resp-details">
+                    <li>Exposição dos produtos</li>
+                    <li>Prateleiras, vitrines, balcões</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Limpeza</div></li>
+            <li>
+                <div class="resp-main">Manutenções e melhorias</div>
+                <ul class="resp-details">
+                    <li>Veículos</li>
+                    <li>Prédio / loja</li>
+                    <li>Computadores, máquinas e equipamentos em geral</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Conferência de caixa / Operações de faturamento</div>
+                <ul class="resp-details">
+                    <li>Dúvidas de como operar no sistema/loja na área de venda</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Gestão de equipe local</div>
+                <ul class="resp-details">
+                    <li>Escala de folga, férias e feriado</li>
+                    <li>Delegações de tarefas</li>
+                    <li>Feedbacks</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Resolução de problemas do dia a dia</div>
+                <ul class="resp-details">
+                    <li>Problemas com: sistema, veículos, aparelhos, máquinas, clientes</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Contas a receber (cobrança)</div></li>
+        </ul>
+    </div>
+    <div class="footer">Operações eficientes = Clientes satisfeitos</div>
+</div>
+
+<!-- ============================================ -->
+<!-- ARTE 2: FINANCEIRO — LUIZ                     -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">💰</div>
+        <h1>Financeiro / Controladoria</h1>
+        <div class="responsavel">Responsável: Luiz</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li><div class="resp-main">Fluxo de caixa</div></li>
+            <li>
+                <div class="resp-main">Contas a pagar</div>
+                <ul class="resp-details">
+                    <li>Organização do pagamento dos fornecedores</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Conciliação</div>
+                <ul class="resp-details">
+                    <li>Conferência das movimentações em Pix, TED, cartão, dinheiro</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">DRE e indicadores financeiros</div></li>
+            <li>
+                <div class="resp-main">Controle de despesas</div>
+                <ul class="resp-details">
+                    <li>Conferências dos gastos do dia a dia como: gasolina, supermercado, manutenções</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Conferência de cofres e movimentações da semana</div>
+                <ul class="resp-details">
+                    <li>Conferência dos fechamentos dos caixas</li>
+                    <li>Sangria do cofre</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">Controle financeiro = Negócio saudável</div>
+</div>
+
+<!-- ============================================ -->
+<!-- ARTE 3: COMERCIAL — LUIZ                      -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">🛒</div>
+        <h1>Comercial / Compras</h1>
+        <div class="responsavel">Responsável: Luiz</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li>
+                <div class="resp-main">Compras com fornecedores</div>
+                <ul class="resp-details">
+                    <li>Compras de mercadoria para revenda</li>
+                    <li>Encomenda de produtos específicos</li>
+                    <li>Negociação com fornecedores</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Definição de mix de produtos</div>
+                <ul class="resp-details">
+                    <li>Análise dos produtos parados (baixa venda)</li>
+                    <li>Sugestões de produtos que não tem e tem procura</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Precificação</div>
+                <ul class="resp-details">
+                    <li>Preço para venda do produto</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Reposição entre lojas</div></li>
+            <li>
+                <div class="resp-main">Controle de estoque</div>
+                <ul class="resp-details">
+                    <li>Conferência de estoque</li>
+                    <li>Ajuste de estoque</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Empréstimos / Transferência de estoque</div></li>
+            <li>
+                <div class="resp-main">Análise de concorrência</div>
+                <ul class="resp-details">
+                    <li>Preço de produtos</li>
+                    <li>Condições de pagamentos</li>
+                    <li>Estratégias</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">Boas compras = Produtos certos, preços competitivos</div>
+</div>
+
+<!-- ============================================ -->
+<!-- ARTE 4: MARKETING — JOÃO                      -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">📢</div>
+        <h1>Marketing / Vendas</h1>
+        <div class="responsavel">Responsável: João</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li>
+                <div class="resp-main">Promoções e campanhas</div>
+                <ul class="resp-details">
+                    <li>Campanha de boca de caixa</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Comunicação visual</div>
+                <ul class="resp-details">
+                    <li>Catálogo</li>
+                    <li>Expositores</li>
+                    <li>Produtos aplicados</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Divulgações / Visibilidade / Conteúdo</div>
+                <ul class="resp-details">
+                    <li>Cartão de visita</li>
+                    <li>Panfletagem</li>
+                    <li>Patrocínios</li>
+                    <li>Plataformas digitais (Instagram, Facebook e WhatsApp)</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Brindes, cortesias, doações</div>
+                <ul class="resp-details">
+                    <li>Camisetas, bonés, ferramentas</li>
+                    <li>Ajuda de verba para parceiros divulgar marca dele + Santo Tintas</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Treinamentos e eventos</div>
+                <ul class="resp-details">
+                    <li>Treinamentos para vendedores e parceiros B2B (pintor, arquiteto, empreiteiro...)</li>
+                    <li>Café da manhã/tarde pintores</li>
+                    <li>Confraternizações</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Comissões e Metas gerente / vendedor</div></li>
+            <li>
+                <div class="resp-main">Negociações</div>
+                <ul class="resp-details">
+                    <li>Cobrir orçamentos</li>
+                    <li>Condições especiais de preços</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">Marketing forte = Mais clientes, mais vendas</div>
+</div>
+
+<!-- ============================================ -->
+<!-- ARTE 5: GENTE — JOÃO                          -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">👥</div>
+        <h1>Gente / Equipe</h1>
+        <div class="responsavel">Responsável: João</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li>
+                <div class="resp-main">Recrutamento e seleção</div>
+                <ul class="resp-details">
+                    <li>Contratação de pessoas</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Treinamento técnico e comportamental</div>
+                <ul class="resp-details">
+                    <li>Capacitação</li>
+                    <li>Qualidade de atendimento</li>
+                    <li>Liderança</li>
+                    <li>Uniforme</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Avaliação de desempenho</div></li>
+            <li>
+                <div class="resp-main">RH / Folha de pagamento</div>
+                <ul class="resp-details">
+                    <li>Fechamento de folha</li>
+                    <li>Vales / Adiantamentos</li>
+                    <li>Férias</li>
+                </ul>
+            </li>
+            <li><div class="resp-main">Plano de carreira</div></li>
+            <li>
+                <div class="resp-main">Resolução de conflitos</div>
+                <ul class="resp-details">
+                    <li>Mediação entre colaboradores</li>
+                    <li>Aplicação de medidas disciplinares</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">Equipe engajada = Resultados extraordinários</div>
+</div>
+
+<!-- ============================================ -->
+<!-- ARTE 6: ESTRATÉGIA — COMPARTILHADO            -->
+<!-- ============================================ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Santo Tintas">
+        </div>
+        <div class="icon">🎯</div>
+        <h1>Estratégia / Expansão</h1>
+        <div class="responsavel">Responsável: Luiz e João (Compartilhado)</div>
+    </div>
+    <div class="content">
+        <ul class="responsibilities">
+            <li>
+                <div class="resp-main">Plano de expansão</div>
+                <ul class="resp-details">
+                    <li>Estudo de novas localidades</li>
+                    <li>Análise de viabilidade econômica</li>
+                    <li>Cronograma de abertura de lojas</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Investimentos acima de X reais</div>
+                <ul class="resp-details">
+                    <li>Aprovação conjunta obrigatória</li>
+                    <li>Análise de payback e ROI</li>
+                    <li>Documentação e justificativa</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Parcerias estratégicas</div>
+                <ul class="resp-details">
+                    <li>Pintores, empreiteiras e arquitetos</li>
+                    <li>Fornecedores-chave</li>
+                    <li>Associações do setor</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Revisão trimestral de resultados</div>
+                <ul class="resp-details">
+                    <li>Análise de metas vs. realizado</li>
+                    <li>Ajustes de rota</li>
+                    <li>Decisões estratégicas coletivas</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Definição de metas anuais</div>
+                <ul class="resp-details">
+                    <li>Receita, margem e crescimento</li>
+                    <li>Metas por loja e por área</li>
+                    <li>Desdobramento em planos de ação</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Decisões de longo prazo</div>
+                <ul class="resp-details">
+                    <li>Posicionamento de marca</li>
+                    <li>Diversificação de produtos/serviços</li>
+                    <li>Transformação digital</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Cultura e valores</div>
+                <ul class="resp-details">
+                    <li>Definição e reforço dos valores</li>
+                    <li>Comunicação interna</li>
+                    <li>Exemplo da liderança</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Definição de margem mínima</div>
+                <ul class="resp-details">
+                    <li>Política de precificação corporativa</li>
+                    <li>Revisão anual de margens</li>
+                    <li>Limites por categoria de produto</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Aprovação de gastos acima do orçamento</div>
+                <ul class="resp-details">
+                    <li>Fluxo de aprovação definido</li>
+                    <li>Justificativa documental</li>
+                    <li>Controle e rastreabilidade</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Compliance trabalhista</div>
+                <ul class="resp-details">
+                    <li>Cumprimento da CLT e convenções</li>
+                    <li>Prevenção de passivos</li>
+                    <li>Auditorias internas</li>
+                </ul>
+            </li>
+            <li>
+                <div class="resp-main">Programa de fidelidade</div>
+                <ul class="resp-details">
+                    <li>Definição de regras e benefícios</li>
+                    <li>Integração com sistema de vendas</li>
+                    <li>Comunicação e engajamento</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">Visão compartilhada = Crescimento sustentável</div>
+</div>
+
+</body>
+</html>
